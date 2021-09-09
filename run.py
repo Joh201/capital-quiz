@@ -53,11 +53,26 @@ def play_game():
     random_index = randint(0, 4)
     
     print(f'What is the capital city of {country_list[random_index]}?')
-    response = input('Please enter city name. For example Asmara, Stockholm.\n')
-    print(response)
-    
-
-
-    
+    # response = input('Please enter city name. For example Asmara, Stockholm.\n')
+   
     
 play_game()
+
+def validate_response():
+  
+    while True:
+        response = input(
+            'Please enter city name. For example Asmara, Stockholm.\n')
+        answer = response.capitalize()
+
+        try:
+            if answer.isdigit():
+                raise TypeError('You entered a number!')
+            else:
+                return answer    
+        except TypeError as e:
+            print(f'Invalid input. {e}')
+               
+            
+print(validate_response())            
+                        
