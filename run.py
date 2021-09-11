@@ -7,7 +7,7 @@ from random import randint
 def country_file(file):
     '''
     The function reads the file containing
-    the country list
+    the country list.
     '''
 
     f = open(file, 'r')
@@ -19,15 +19,13 @@ def country_file(file):
     return country_name  
       
 
-print(country_file('countries.txt'))
-
+country_list = country_file('countries.txt')
 
 def capital_file(file):
     '''
     The function reads the file containing
-    the capital city list
+    the capital city list.
     '''
-
     f = open(file, 'r')
     capital_cities = f.readlines()
     f.close()
@@ -37,42 +35,74 @@ def capital_file(file):
     return capital_name  
     
 
-print(capital_file('capitals.txt'))
+capital_list = capital_file('capitals.txt')
+
+def ask_name():
+    '''
+    The function gets the name of the player and
+    welcomes the player to the game.
+    '''
+    player_name = input('Please enter your name.\n')
+    print(f'Welcome to the game {player_name}!')
+    return player_name
+
+ask_name()    
 
 
 def play_game():
     '''
-    The function runs the game and asks the player to
-    input their response. 
-
+    The function runs the game, asks the player a question,
+    validates the response of the player and returns 
+    the score of the player. 
     '''
-    player_name = input('Pleae enter your name.\n')
-    print(f'Welcome to the game {player_name}!')
-    country_list = country_file('countries.txt')
-    capital_list = capital_file('capitals.txt')
-    random_index = randint(0, 4)
-    
-    print(f'What is the capital city of {country_list[random_index]}?')
-    # response = input('Please enter city name. For example Asmara, Stockholm.\n')
-   
-    
-play_game()
-
-def validate_response():
-  
+    country_list
+    capital_list
+    player_score = 0
     while True:
-        response = input(
-            'Please enter city name. For example Asmara, Stockholm.\n')
-        answer = response.capitalize()
 
-        try:
-            if answer.isdigit():
-                raise TypeError('You entered a number!')
-            else:
-                return answer    
-        except TypeError as e:
-            print(f'Invalid input. {e}')
-               
+        random_index = randint(0, 6)
+        country = country_list[random_index]
+        country_index = country_list.index(country)
+        print(f'What is the capital city of {country}?')
+
+        def validate_response():
+            while True:
+                response = input(
+                    'Please enter city name. For example Asmara, Dublin.\n')
+                answer = response.capitalize()
+
+                try:
+                    if answer.isdigit():
+                        raise TypeError('You entered a number!')
+                    else:
+                        return answer   
+                except TypeError as e:
+                    print(f'Invalid input. {e}')             
             
-print(validate_response())            
-                        
+        player_answer = validate_response()
+
+        for i in range(len(capital_list)):
+            if i == country_index and capital_list[i] == player_answer:
+                print('Well done!')
+                player_score += 1
+                break
+                
+        else:
+            print('You missed this time')
+        
+        play = input('To continue playing enter: y or n to quit\n')
+        if play.lower() == 'y':
+            continue
+          
+        return player_score         
+    
+score = play_game()
+print(score)
+
+
+
+
+
+
+
+
