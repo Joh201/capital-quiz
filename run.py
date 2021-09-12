@@ -47,7 +47,7 @@ def ask_name():
     print(f'Welcome to the game {player_name}!')
     return player_name
 
-ask_name()    
+ask_name()
 
 
 def play_game():
@@ -61,7 +61,7 @@ def play_game():
     player_score = 0
     while True:
 
-        random_index = randint(0, 6)
+        random_index = randint(0, 9)
         country = country_list[random_index]
         country_index = country_list.index(country)
         print(f'What is the capital city of {country}?')
@@ -91,6 +91,7 @@ def play_game():
                 
         else:
             print('You missed this time')
+            print('Hint: Next time check your spelling')
         
         play = input('To continue playing enter: y or n to quit\n')
         if play.lower() == 'y':

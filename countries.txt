@@ -5,3 +5,6 @@ Norway
 Ethiopia
 Egypt
 Sudan
+Germany
+Australia
+Brazil

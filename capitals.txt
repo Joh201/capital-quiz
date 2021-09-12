@@ -5,3 +5,6 @@ Oslo
 Addis Ababa
 Cairo
 Khartoum
+Berlin
+Canberra
+Brasilia
