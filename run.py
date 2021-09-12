@@ -3,6 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 from random import randint
+from string import capwords
 
 def country_file(file):
     '''
@@ -69,7 +70,7 @@ def play_game():
             while True:
                 response = input(
                     'Please enter city name. For example Asmara, Dublin.\n')
-                answer = response.capitalize()
+                answer = capwords(response)
 
                 try:
                     if answer.isdigit():
@@ -83,6 +84,7 @@ def play_game():
 
         for i in range(len(capital_list)):
             if i == country_index and capital_list[i] == player_answer:
+                print(f'The capital of {country} is: {capital_list[i]}')
                 print('Well done!')
                 player_score += 1
                 break
