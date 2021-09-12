@@ -5,6 +5,7 @@
 from random import randint
 from string import capwords
 
+
 def country_file(file):
     '''
     The function reads the file containing
@@ -17,10 +18,11 @@ def country_file(file):
     country_name = []
     for country in countries:
         country_name.append(country.replace('\n', ''))
-    return country_name  
-      
+    return country_name
+
 
 country_list = country_file('countries.txt')
+
 
 def capital_file(file):
     '''
@@ -32,11 +34,12 @@ def capital_file(file):
     f.close()
     capital_name = []
     for capital in capital_cities:
-        capital_name.append(capital.replace('\n', ''))    
-    return capital_name  
-    
+        capital_name.append(capital.replace('\n', ''))
+    return capital_name
+
 
 capital_list = capital_file('capitals.txt')
+
 
 def ask_name():
     '''
@@ -47,14 +50,15 @@ def ask_name():
     print(f'Welcome to the game {player_name}!')
     return player_name
 
+
 ask_name()
 
 
 def play_game():
     '''
     The function runs the game, asks the player a question,
-    validates the response of the player and returns 
-    the score of the player. 
+    validates the response of the player and returns
+    the score of the player.
     '''
     country_list
     capital_list
@@ -75,11 +79,13 @@ def play_game():
                 try:
                     if answer.isdigit():
                         raise TypeError('You entered a number!')
+                    elif any(str.isdigit(i) for i in answer):
+                        raise TypeError('You entered a name with number!')
                     else:
-                        return answer   
+                        return answer
                 except TypeError as e:
-                    print(f'Invalid input. {e}')             
-            
+                    print(f'Invalid input. {e}')
+
         player_answer = validate_response()
 
         for i in range(len(capital_list)):
@@ -88,24 +94,17 @@ def play_game():
                 print('Well done!')
                 player_score += 1
                 break
-                
+
         else:
             print('You missed this time')
             print('Hint: Next time check your spelling')
-        
+
         play = input('To continue playing enter: y or n to quit\n')
         if play.lower() == 'y':
             continue
-          
-        return player_score         
-    
+
+        return player_score
+
+
 score = play_game()
 print(score)
-
-
-
-
-
-
-
-
