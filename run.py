@@ -1,7 +1,4 @@
 
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 from random import randint
 from string import capwords
 
@@ -11,7 +8,6 @@ def country_file(file):
     The function reads the file containing
     the country list.
     '''
-
     f = open(file, 'r')
     countries = f.readlines()
     f.close()
@@ -57,7 +53,7 @@ ask_name()
 def handle_quit(user_input, score, questions_answered_count):
     '''
     The function allows the player to continue palying or
-    to exit the game. It also reports the players score.
+    to exit the game. It also reports the player's score.
     '''
     if user_input.lower() == 'y':
         return
@@ -76,7 +72,7 @@ def generate_rand_int(data):
     are not repeated while the game is running.
     '''
     random_index = randint(0, 9)
-    if (random_index in data):
+    if random_index in data:
         return generate_rand_int(data)
     return random_index
 
@@ -98,6 +94,7 @@ def play_game():
         country_index = country_list.index(country)
         print(f'What is the capital city of {country}?')
 
+        # This function validates the users input
         def validate_response():
             while True:
                 response = input(
@@ -116,9 +113,11 @@ def play_game():
 
         player_answer = validate_response()
 
+        # This code adds the question to the list of asked questions
         question_answered_indexes.append(country_index)
         print(question_answered_indexes)
 
+        # This section checks if the player's response is correct
         if capital_list[country_index] == player_answer:
             capital = capital_list[country_index]
             print(f'The capital of {country} is: {capital}')
@@ -129,7 +128,7 @@ def play_game():
             print('You missed this time')
             print('Hint: Next time check your spelling')
 
-        # end of game
+        # This section handles players decision at the end of the game
         if len(question_answered_indexes) == 4:
             question_count = len(question_answered_indexes)
             print(f'You score is {player_score} out of {question_count}')
