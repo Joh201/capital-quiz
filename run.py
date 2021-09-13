@@ -54,6 +54,33 @@ def ask_name():
 ask_name()
 
 
+def handle_quit(user_input, score, questions_answered_count):
+    '''
+    The function allows the player to continue palying or
+    to exit the game. It also reports the players score.
+    '''
+    if user_input.lower() == 'y':
+        return
+    elif user_input.lower() == 'n':
+        print(f'You score is {score} out of {questions_answered_count}')
+        quit()
+    else:
+        play = input('please enter y or n.\n')
+        handle_quit(play, score, questions_answered_count)
+
+
+def generate_rand_int(data):
+    '''
+    The function generates random numbers which are used
+    to get random questions, and it ensures questions
+    are not repeated while the game is running.
+    '''
+    random_index = randint(0, 9)
+    if (random_index in data):
+        return generate_rand_int(data)
+    return random_index
+
+
 def play_game():
     '''
     The function runs the game, asks the player a question,
@@ -63,9 +90,10 @@ def play_game():
     country_list
     capital_list
     player_score = 0
+    question_answered_indexes = []
     while True:
 
-        random_index = randint(0, 9)
+        random_index = generate_rand_int(question_answered_indexes)
         country = country_list[random_index]
         country_index = country_list.index(country)
         print(f'What is the capital city of {country}?')
@@ -88,23 +116,30 @@ def play_game():
 
         player_answer = validate_response()
 
-        for i in range(len(capital_list)):
-            if i == country_index and capital_list[i] == player_answer:
-                print(f'The capital of {country} is: {capital_list[i]}')
-                print('Well done!')
-                player_score += 1
-                break
+        question_answered_indexes.append(country_index)
+        print(question_answered_indexes)
+
+        if capital_list[country_index] == player_answer:
+            capital = capital_list[country_index]
+            print(f'The capital of {country} is: {capital}')
+            print('Well done!')
+            player_score += 1
 
         else:
             print('You missed this time')
             print('Hint: Next time check your spelling')
 
-        play = input('To continue playing enter: y or n to quit\n')
-        if play.lower() == 'y':
-            continue
+        # end of game
+        if len(question_answered_indexes) == 4:
+            question_count = len(question_answered_indexes)
+            print(f'You score is {player_score} out of {question_count}')
+            play = input('Game ended, press y to start again or n to quit:\n')
+            handle_quit(play, player_score, len(question_answered_indexes))
+            player_score = 0
+            question_answered_indexes.clear()
+        else:
+            play = input('To continue playing enter: y or n to quit\n')
+            handle_quit(play, player_score, len(question_answered_indexes))
 
-        return player_score
 
-
-score = play_game()
-print(score)
+play_game()
