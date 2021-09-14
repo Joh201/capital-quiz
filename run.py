@@ -49,6 +49,7 @@ def handle_quit(user_input, score, questions_answered_count):
         return
     elif user_input.lower() == 'n':
         print(f'You score is {score} out of {questions_answered_count}')
+        print("\033c\033[3J", end='')
         play_game()
         quit()
 
