@@ -61,7 +61,7 @@ def generate_rand_int(data):
     to get random questions, and it ensures questions
     are not repeated while the game is running.
     '''
-    random_index = randint(0, 9)
+    random_index = randint(0, 24)
     if random_index in data:
         return generate_rand_int(data)
     return random_index
@@ -110,7 +110,6 @@ def play_game():
 
         # This code adds the question to the list of asked questions
         question_answered_indexes.append(country_index)
-        print(question_answered_indexes)
 
         # This section checks if the player's response is correct
         if capital_list[country_index] == player_answer:
