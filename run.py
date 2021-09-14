@@ -36,7 +36,7 @@ def ask_name():
     welcomes the player to the game.
     '''
     player_name = input('Please enter your name.\n')
-    print(f'Welcome to the game {player_name}!')
+    print(f'***Welcome to the capital city game {player_name}!***')
     return player_name
 
 
@@ -95,6 +95,7 @@ def play_game():
                     'Please enter city name. For example Asmara, Dublin.\n')
                 answer = capwords(response)
 
+        # This section was adapted and modified based on course material
                 try:
                     if answer.isdigit():
                         raise TypeError('You entered a number!')
