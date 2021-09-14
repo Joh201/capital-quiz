@@ -1,4 +1,3 @@
-
 from random import randint
 from string import capwords
 
@@ -17,9 +16,6 @@ def country_file(file):
     return country_name
 
 
-country_list = country_file('countries.txt')
-
-
 def capital_file(file):
     '''
     The function reads the file containing
@@ -34,9 +30,6 @@ def capital_file(file):
     return capital_name
 
 
-capital_list = capital_file('capitals.txt')
-
-
 def ask_name():
     '''
     The function gets the name of the player and
@@ -45,9 +38,6 @@ def ask_name():
     player_name = input('Please enter your name.\n')
     print(f'Welcome to the game {player_name}!')
     return player_name
-
-
-ask_name()
 
 
 def handle_quit(user_input, score, questions_answered_count):
@@ -83,10 +73,14 @@ def play_game():
     validates the response of the player and returns
     the score of the player.
     '''
-    country_list
-    capital_list
+    country_list = country_file('countries.txt')
+    capital_list = capital_file('capitals.txt')
+
     player_score = 0
     question_answered_indexes = []
+
+    ask_name()
+
     while True:
 
         random_index = generate_rand_int(question_answered_indexes)
