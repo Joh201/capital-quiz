@@ -8,3 +8,18 @@ Khartoum
 Berlin
 Canberra
 Brasilia
+Lima
+Santiago
+Ottawa
+Buenos Aires
+Paris
+Beijing
+Bangkok
+Dublin
+Rabat
+Dushanbe
+Beirut
+Maseru
+Accra
+Hanoi
+Tokyo
