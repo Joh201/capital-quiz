@@ -124,7 +124,7 @@ def play_game():
             print('Hint: Next time check your spelling')
 
         # This section handles players decision at the end of the game
-        if len(question_answered_indexes) == 4:
+        if len(question_answered_indexes) == 25:
             question_count = len(question_answered_indexes)
             print(f'You score is {player_score} out of {question_count}')
             play = input('Game ended, press y to start again or n to quit:\n')
