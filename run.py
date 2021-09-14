@@ -49,7 +49,9 @@ def handle_quit(user_input, score, questions_answered_count):
         return
     elif user_input.lower() == 'n':
         print(f'You score is {score} out of {questions_answered_count}')
+        play_game()
         quit()
+
     else:
         play = input('please enter y or n.\n')
         handle_quit(play, score, questions_answered_count)
@@ -136,3 +138,4 @@ def play_game():
 
 
 play_game()
+
