@@ -64,6 +64,12 @@ The user can play the game as long as the user wants.
  A capital city shares the same index with its respective country. A temporary list is used to store the index of the previously asked questions in order <br>to have
  random unrepeated questions, and this list gets cleared at the end of the game or when the user quits the game.</p>
 
+ ## Testing
+* I have passed the code through PEP8 Python code validator and I found no problems.
+* I have tested that the project handles invalid inputs such as numbers or strings with numbers.
+* I have also tested on gitpod and Code Institute's Heroku Terminal.
+
+
 
 
 
