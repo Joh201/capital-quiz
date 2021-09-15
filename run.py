@@ -36,7 +36,7 @@ def ask_name():
     welcomes the player to the game.
     '''
     player_name = input('Please enter your name.\n')
-    print(f'***Welcome to the capital city game {player_name}!***')
+    print(f'***Welcome to the Capital City game {player_name}!***')
     return player_name
 
 
