@@ -96,6 +96,7 @@ def play_game():
                 answer = capwords(response)
 
         # This section was adapted and modified based on course material
+# This code:any(str.isdigit(a)for a in '124') was referenced from stackoverflow
                 try:
                     if answer.isdigit():
                         raise TypeError('You entered a number!')
