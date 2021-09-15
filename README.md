@@ -69,6 +69,15 @@ The user can play the game as long as the user wants.
 * I have tested that the project handles invalid inputs such as numbers or strings with numbers.
 * I have also tested on gitpod and Code Institute's Heroku Terminal.
 
+## Bugs
+
+### Solved Bugs
+
+* During the development of the project I encountered an infinite while loop but I resolved the problem using the <br> right if and else statments that contain call back functions to exit the loop.
+
+### Remaining Bugs
+* There are no remaining bugs.
+
 
 
 
