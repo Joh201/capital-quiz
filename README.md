@@ -37,6 +37,18 @@ The user can play the game as long as the user wants.
 
 ![check](assets/images/checkanswer.PNG)
 
+### During the game
+* The user can decide to continue playing or leave the game by choosing  'y' or 'n' respectively.
+* If the user decides to leave before answering all the questions, the user can get a score report.
+
+![middle of game](assets/images/midgame.PNG)
+
+### Continuation response
+* The user is asked to choose either 'y' or 'n' to continue palying.
+* However, if the user inputs other letters, the user is requested again to input the right letter.
+
+![continuation](assets/images/continuresponse.PNG)
+
 
 
 
