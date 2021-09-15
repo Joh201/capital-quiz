@@ -78,7 +78,22 @@ The user can play the game as long as the user wants.
 ### Remaining Bugs
 * There are no remaining bugs.
 
+## Validator Testing
+* I found no errors when I run the code through PEP8online.com
 
+## Deployment
+* The project was deployed using Code Institute's Heroku mock terminal.
+<ul> The following steps were followed during deployment:
+  <ol>
+  <li>Cloning this repository</li>
+  <li>Creating a new Heroku app for the project</li>
+  <li>Setting the buildpack for Paython first and then for Node Js</li>
+  <li>Link the Heroku app to the repository</li>
+  <li>Finally deploy by clicking <em>Deploy</em></li>
+
+  </ol>
+
+</ul>
 
 
 
