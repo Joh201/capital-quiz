@@ -12,4 +12,13 @@ The capital city game is a simple game that can be played by children and adults
 
 ![welcome message](assets/images/welcome.PNG)
 
+### Input valiation
+* when the player inputs a response to a question, the response is checked:
+* Wether the input is a number or the input contains a number.
+* Depending on the case the player gets appropriate feedback.
+* The player also gets suggestions on the right format of input.
+
+![validation](assets/images/invalidinput.PNG)
+
+
 
