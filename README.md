@@ -24,11 +24,19 @@ The user can play the game as long as the user wants.
 
 ### Input valiation
 * when the player inputs a response to a question, the response is checked:
-* Wether the input is a number or the input contains a number.
+* Whether the input is a number or the input contains a number.
 * Depending on the case the player gets appropriate feedback.
 * The player also gets suggestions on the right format of input.
 
 ![validation](assets/images/invalidinput.PNG)
+
+### Feedback to the user
+* When the user anwers the question, the user gets two types of feedback:
+* If the user gives the correct answer, the user receives well done message.
+* If the user misses the right answer, the user gets a hint to check spelling.
+
+![check](assets/images/checkanswer.PNG)
+
 
 
 
