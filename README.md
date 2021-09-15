@@ -49,6 +49,14 @@ The user can play the game as long as the user wants.
 
 ![continuation](assets/images/continuresponse.PNG)
 
+### End of game
+* If the user anwers all the questions, the user get a score report.
+* The user also gets the message 'game ended'.
+* The user is then provided the option to continue playing or stop the game.
+
+![end of game](assets/images/endofgame.PNG)
+
+
 
 
 
