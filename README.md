@@ -11,7 +11,8 @@ The capital city game is a simple Python terminal game that can be played by chi
 ## How to play
 The capital city game is an easy game to play. The user starts the game by pressing the run programe
 button at the top of the game. The user is then requested to enter name, after that the game randomly chooses
-one question out of 25 questions. The user can play the game as long as the user wants.
+one question out of 25 questions. The user then types in the response to the question, and receives a feed back.
+The user can play the game as long as the user wants.
 
 ## Existing features
 
