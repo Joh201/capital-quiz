@@ -59,6 +59,10 @@ The user can play the game as long as the user wants.
 ## Future Features
 * Increase the number of questions to include all the capitals of the world
 
+## Data Model
+<p>Two text files are used to store the country and capital city information. These files are then read into the program and stored in their respective list.<br>
+ A capital city shares the same index with its respective country. A temporary list is used to store the index of the previously asked questions in order <br>to have
+ random unrepeated questions, and this list gets cleared at the end of the game or when the user quits the game.</p>
 
 
 
