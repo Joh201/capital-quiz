@@ -88,12 +88,15 @@ The user can play the game as long as the user wants.
   <li>Cloning this repository</li>
   <li>Creating a new Heroku app for the project</li>
   <li>Setting the buildpack for Paython first and then for Node Js</li>
+  <li>Creating a Config Var called PORT with a value of 8000</li>
   <li>Link the Heroku app to the repository</li>
   <li>Finally deploy by clicking <em>Deploy</em></li>
-
   </ol>
-
 </ul>
+
+## Credits
+* Code institute for the deployment process and deployment terminal.
+
 
 
 
