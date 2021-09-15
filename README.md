@@ -14,7 +14,7 @@ button at the top of the game. The user is then requested to enter name, after t
 one question out of 25 questions. The user then types in the response to the question, and receives a feed back.
 The user can play the game as long as the user wants.
 
-## Existing features
+## Existing Features
 
 ### Welcome message
 * When the player starts the game, the player is requested to input name.
@@ -55,6 +55,11 @@ The user can play the game as long as the user wants.
 * The user is then provided the option to continue playing or stop the game.
 
 ![end of game](assets/images/endofgame.PNG)
+
+## Future Features
+* Increase the number of questions to include all the capitals of the world
+
+
 
 
 
