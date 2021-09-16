@@ -24,7 +24,7 @@ The user can play the game as long as the user wants.
 
 ### Input valiation
 * when the player inputs a response to a question, the response is checked:
-* Whether the input is a number or the input contains a number.
+* Whether the input is a number or string with a number.
 * Depending on the case the player gets appropriate feedback.
 * The player also gets suggestions on the right format of input.
 
@@ -39,7 +39,7 @@ The user can play the game as long as the user wants.
 
 ### During the game
 * The user can decide to continue playing or leave the game by choosing  'y' or 'n' respectively.
-* If the user decides to leave before answering all the questions, the user can get a score report.
+* If the user decides to quit the game before answering all the questions, the user can get a score report.
 
 ![middle of game](assets/images/midgame.PNG)
 
@@ -57,7 +57,7 @@ The user can play the game as long as the user wants.
 ![end of game](assets/images/endofgame.PNG)
 
 ## Future Features
-* Increase the number of questions to include all the capitals of the world
+* Increase the number of questions to include all the capitals of the world.
 
 ## Data Model
 <p>Two text files are used to store the country and capital city information. These files are then read into the program and stored in their respective list.<br>
